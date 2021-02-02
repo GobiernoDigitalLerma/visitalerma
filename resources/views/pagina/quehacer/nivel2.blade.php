@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Que hacer</title>
-  @laravelPWA
+  @PWACRIZPRZ
   <style>
     @media screen and (min-width: 800px) {
      .imagen{

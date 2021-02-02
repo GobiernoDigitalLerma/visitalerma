@@ -211,4 +211,50 @@ buttonAdd.addEventListener('click', (e) => {
     }
   });
 </script>
+
+<script>
+
+    const ip = "<?php echo $_SERVER['REMOTE_ADDR'] ; ?>";
+
+        function subscripcion(){
+          if (!swReg) return console.log("no hay registro del service worker");
+
+          swReg.pushManager
+           .subscribe({
+               userVisibleOnly: true,
+               applicationServerKey: urlBase64ToUint8Array(
+                   "{{env('VAPID_PUBLIC_KEY')}}"
+                 )
+           })
+           .then(res => res.toJSON())
+           .then(subscripcion => {
+
+               fetch('/api/subscribe/'+ip, {
+                   method: 'POST',
+                   headers:{
+                       'Content-Type': 'application/json'
+                     },
+                   body: JSON.stringify(subscripcion)
+               })
+               .then(  verificasubscripcion() )
+               .catch(console.log);
+
+           });
+          };
+
+                 //function url
+          function urlBase64ToUint8Array(base64String) {
+          const padding = '='.repeat((4 - base64String.length % 4) % 4);
+          const base64 = (base64String + padding)
+          .replace(/\-/g, '+')
+          .replace(/_/g, '/');
+          const rawData = window.atob(base64);
+          const outputArray = new Uint8Array(rawData.length);
+          for (let i = 0; i < rawData.length; ++i) {
+          outputArray[i] = rawData.charCodeAt(i);
+          }
+          return outputArray;
+          }
+          notificarme();
+        </script>
 @endsection

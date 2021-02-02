@@ -35,6 +35,31 @@ class ManifestService
             ];
         }
 
+        if (config('laravelpwa.manifest.shortcuts')) {
+            foreach (config('laravelpwa.manifest.shortcuts') as $shortcut) {
+
+                if (array_key_exists("icons", $shortcut)) {
+                    $fileInfo = pathinfo($shortcut['icons']['src']);
+                    $icon = [
+                        'src' => $shortcut['icons']['src'],
+                        'type' => 'image/' . $fileInfo['extension'],
+                        'purpose' => $shortcut['icons']['purpose']
+                    ];
+                } else {
+                    $icon = [];
+                }
+
+                $basicManifest['shortcuts'][] = [
+                    'name' => trans($shortcut['name']),
+                    'description' => trans($shortcut['description']),
+                    'url' => $shortcut['url'],
+                    'icons' => [
+                        $icon
+                    ]
+                ];
+            }
+        }
+
         foreach (config('laravelpwa.manifest.custom') as $tag => $value) {
              $basicManifest[$tag] = $value;
         }

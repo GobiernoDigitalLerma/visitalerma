@@ -7,43 +7,40 @@ use Illuminate\Http\Request;
 use Session;
 use App\Usuario;
 use App\Actividad;
+use App\Notifications\push;
 
 
 class SubscribeController extends Controller
 {
-    // public function subscribe($ip, Request $request)
-    // {
-    //     // dd($request);
-    //       $user = registropush::create([
-    //           'ip' => $ip,
-    //       ]);
-
-
-
-    //     $user->updatePushSubscription($request->input('endpoint'),$request->input('keys.p256dh'),$request->input('keys.auth'));
-    //     $title = "titulo";
-    //     $body = "body";
-    //     $user->notify(new \App\Notifications\push($title, $body));
-    //     return "guardado";
-    // }
+    public function subscribe($ip, Request $request)
+    {       
+          $user = registropush::create([
+              'ip' => $ip,
+          ]);
+        $user->updatePushSubscription($request->input('endpoint'),$request->input('keys.p256dh'),$request->input('keys.auth'));
+        return "guardado";
+    }
 
     public function sendNotification(Request $request)
     {
-      
+      dd($request);
         $this->validateNotification($request);
 
+        $user = registropush::all();
+        // dd($user);
+        $title = $request->title;
+        $body = $request->mensaje;
+        // foreach ($user as $push) {
+        //   $push->notify(new \App\Notifications\push($title, $body));
+        // }
 
-        return "Titulo: <strong>$request->title</strong> <br> Mensaje: <strong>$request->body</strong>";
-          $user = registropush::findOrFail(1);
 
-          $title = $request->title;
-          $body = $request->body;
-          $user->notify(new \App\Notifications\push($title, $body));
-          //Notification::send($encuestado, new push($title, $body));
-          //$encuestado->notify(new \App\Notifications\push($title, $body));
-          return response()->json([
-            'success' => true
-          ]);
+        \Notification::send($user, new push($title, $body));
+        //$encuestado->notify(new \App\Notifications\push($title, $body));
+        return response()->json([
+          'success' => true
+        ]);
+
       }
 
       public function notificaciones()

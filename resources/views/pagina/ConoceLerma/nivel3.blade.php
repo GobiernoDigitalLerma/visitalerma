@@ -7,7 +7,7 @@
     @else
     	<title>Actividad</title>
     @endif
-    @laravelPWA
+    @PWACRIZPRZ
     <style media="screen">
     @media screen and (max-width: 800px) {
       .divfotoprincipal{

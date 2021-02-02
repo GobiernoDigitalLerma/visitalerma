@@ -5,7 +5,7 @@
 @section('title')
         <title>Qué sucede ahora</title>
 @endsection
-@laravelPWA
+@PWACRIZPRZ
 </head>
 <body>
 @extends('pagina.header')

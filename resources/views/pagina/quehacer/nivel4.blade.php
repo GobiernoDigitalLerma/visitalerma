@@ -10,7 +10,7 @@
 <!-- para las estrellas -->
 <link href="{{asset('css/starrr.css')}}" rel=stylesheet />
 
-	@laravelPWA
+@PWACRIZPRZ
 	<style media="screen">
     @media screen and (max-width: 800px) {
       .divfotoprincipal{

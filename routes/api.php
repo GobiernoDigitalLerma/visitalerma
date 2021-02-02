@@ -19,3 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('quehacer', 'UsuarioController@quehacer');
+
+Route::post('subscribe/{ip}', 'SubscribeController@subscribe');
+
+Route::get('web', 'SubscribeController@send');

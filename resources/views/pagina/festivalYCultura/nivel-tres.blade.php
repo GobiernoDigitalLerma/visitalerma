@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
     <title>{{$actividad[0]->nombre}}</title>
-    @laravelPWA
+    @PWACRIZPRZ
 
     <style media="screen">
     @media screen and (max-width: 800px) {

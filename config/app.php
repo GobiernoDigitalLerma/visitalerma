@@ -175,7 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-
+        App\Providers\PWAcrizprz::class,
+        NotificationChannels\WebPush\WebPushServiceProvider::class,
     ],
 
     /*

@@ -1,6 +1,8 @@
 # Laravel (PWA) Progressive Web Aplication
 
-[![Laravel 5.x](https://img.shields.io/badge/Laravel-5.x-orange.svg)](http://laravel.com)
+[![Laravel 5.x](https://img.shields.io/badge/Laravel-5.x-orange.svg)](https://laravel.com/docs/5.8)
+[![Laravel 6.x](https://img.shields.io/badge/Laravel-6.x-blue.svg)](https://laravel.com/docs/6.x)
+[![Laravel 7.x](https://img.shields.io/badge/Laravel-7.x-red.svg)](https://laravel.com)
 [![Latest Stable Version](https://poser.pugx.org/silviolleite/laravelpwa/v/stable)](https://packagist.org/packages/silviolleite/laravelpwa)
 [![Total Downloads](https://poser.pugx.org/silviolleite/laravelpwa/downloads.png)](https://packagist.org/packages/silviolleite/laravelpwa)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://packagist.org/packages//silviolleite/laravelpwa)
@@ -22,14 +24,14 @@ Add the following to your `composer.json` file :
 
 ```json
 "require": {
-    "silviolleite/laravelpwa": "˜2.0.0",
+    "silviolleite/laravelpwa": "~2.0.3",
 },
 ```
 
 or execute
 
 ```bash
-composer require silviolleite/laravelpwa
+composer require silviolleite/laravelpwa --prefer-dist
 ```
 
 ### Publish
@@ -97,6 +99,22 @@ Configure your app name, description, icons and splashes  in `config/laravelpwa.
             '1668x2224' => '/images/icons/splash-1668x2224.png',
             '1668x2388' => '/images/icons/splash-1668x2388.png',
             '2048x2732' => '/images/icons/splash-2048x2732.png',
+        ],
+        'shortcuts' => [
+            [
+                'name' => 'Shortcut Link 1',
+                'description' => 'Shortcut Link 1 Description',
+                'url' => '/shortcutlink1',
+                'icons' => [
+                    "src" => "/images/icons/icon-72x72.png",
+                    "purpose" => "any"
+                ]
+            ],
+            [
+                'name' => 'Shortcut Link 2',
+                'description' => 'Shortcut Link 2 Description',
+                'url' => '/shortcutlink2'
+            ]
         ],
         'custom' => []
     ]

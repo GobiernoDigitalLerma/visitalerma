@@ -1,0 +1,140 @@
+
+.contenido{
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom:2px; 
+}
+/*Invertir colores del menu*/
+.gradient-1{
+    background-image: -webkit-linear-gradient(left, #e4032b, #8c348b 100%);
+    background-image: -o-linear-gradient(left, #e4032b, #8c348b 100%);
+    background-image: linear-gradient(to right, #e4032b, #8c348b 100%);
+}
+/*Para las redes sociales*/
+#ListaRedesSocialesFooter{
+      list-style:none;
+      list-style-type: disc;
+      display:flex;
+      font-family:Arial;
+      font-weight:bold;
+      font-size:13px;
+      padding: 0px;
+    }
+#ListaRedesSocialesFooter li {
+      display:inline; 
+      padding:0;
+      padding-right: 7px;
+      padding-left: 7px;
+}
+  
+/*cuando la pantalla esta mas grande de 800px aplica los siguientes estilos*/
+@media screen and (min-width: 800px) {
+  .collapse{
+    display:flex;
+    justify-content: space-around;
+  }
+  .menu ul{
+    display:table; 
+    width:100%; 
+  }
+  .menu li{
+    display:table-cell; float:none;
+  }
+  .menuTexto{
+    font-weight:bold;
+    font-size:28px;
+    padding:0;
+    text-align: center;
+    font-family: 'Bebas Neue', arial;
+  }
+  .enlacesFooter{
+    color: white;
+    text-decoration: none
+  }
+  .contacto{
+    margin-left:   90px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    line-height : 30px;
+  }
+  .enlaces{
+    margin-left:   90px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    line-height : 30px;
+  }
+  .textoFooter1{
+    margin-left:   0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: white;
+    text-align: right;  
+    padding: 15px;
+  }
+  .textoFooter2{
+    margin-left:   0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: white;
+    text-align: left;   
+    padding: 15px;
+  } 
+  .footerEnlaces{
+    height: 200px;
+  }
+  .footerIMG{
+    height: 50px;
+  }
+} 
+/*cuando la pantalla esta mas chica de 800px aplica los siguientes estilos*/
+@media screen and (max-width: 800px) {
+    .enlacesFooter{
+      color: white;
+      text-decoration: none
+    }
+    .contacto{
+      margin-left:   10px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      line-height : 30px;
+    }
+    .enlaces{
+      margin-left:   10px;
+      margin-bottom: 10px;
+      margin-top: 26px;
+      line-height : 30px;
+    }
+    .textoFooter1{
+      margin-left:   0px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      color: white;
+      text-align: center;   
+      padding: 10px;
+    }
+    .textoFooter2{
+      margin-left:   0px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      color: white;
+      text-align: center;   
+      padding: 10px;
+    } 
+    .menuTexto{
+      font-weight:bold;
+      font-size:25px;
+      padding:0px;
+      font-family: 'Bebas Neue', arial;
+    } 
+    .menuTexto a{
+      padding:4px;
+    } 
+}
+
+
+.titulos{
+  font-size: 50px;
+  font-family: 'Bebas Neue', arial;
+} 

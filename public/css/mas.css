@@ -1,0 +1,129 @@
+/*Para la imagen principal*/
+.Principal{
+	margin-top: 50px;
+	width: 565px;
+	height: 450px;
+	margin-bottom: 10px;
+}
+
+
+/*texto de la imagen principal*/
+.card-title{
+	margin-top: 200px;
+	margin-right: 80px;
+	text-align: right;
+	color:white;
+
+}
+/*Primer texto debajo de la imagen principal*/
+.texto-main p{
+	width: 100%;
+	text-align: justify;
+	padding: 80px 40px 0px 40px;
+}
+/*Espacio que separa del primer texto*/
+.actividad{
+	margin-bottom: 20px;
+	width: 100%;
+	display: inline-block;
+}
+/*Descripcion de cada actividad*/
+.actividad .descripcion-left{
+	float: left;
+	width: 40%;
+}
+.actividad .descripcion-right{
+	float: right;
+	width: 40%;	
+}
+.actividad .descripcion-left p ,.actividad .descripcion-left h3{
+	text-align: justify;
+	width: 100%;
+	padding: 30px;	
+}
+.actividad .descripcion-right p, .actividad .descripcion-right h3{
+	text-align: justify;
+	width: 100%;
+	padding: 30px;	
+}
+/*Para las imagenes pequeñas*/
+.actividad .img-left{
+	width: 60%;
+	float: left;
+	margin-left: 0px;
+
+	-webkit-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75)
+}
+.actividad .img-right{
+	width: 60%;
+	margin-right: 0px;
+	float: right;
+
+	-webkit-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75)
+}
+
+/*texto de la imagenes */
+
+@media screen and (max-width: 800px) {
+	/*Primer texto debajo de la imagen principal*/
+	.texto-main p{
+		width: 100%;
+		text-align: center,justify-content;
+		padding: 10%;
+	}
+	/*Espacio que separa del primer texto*/
+	.actividad{
+		margin-bottom: 20px;
+		width: 100%;
+		padding: 0px 20px 0px 20px;
+	}
+	/*Descripcion de cada actividad*/
+	.actividad .descripcion-left{
+		text-align: left;
+		float: none;
+		width: 100%;
+		display: inline-block;
+		margin-top: 30px;
+		padding: 0;
+	}
+	.actividad .descripcion-right{
+		text-align: left;
+		float: none;
+		width: 100%;
+		display: inline-block;
+		margin-top: 30px;
+		padding: 0;		
+	}
+	.actividad .descripcion-left p{
+		padding: 0;
+	}
+	.actividad .descripcion-right p{
+		padding: 0;
+	}
+	/*Para las imagenes pequeñas*/
+	.actividad .img-left{
+		width: 100%;
+		margin-left: 0px;
+		display: inline-block;
+		float: none;
+
+		-webkit-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+		box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75)
+	}
+	.actividad .img-right{
+		width: 100%;
+		margin-right: 0px;
+		display: inline-block;
+		float: none;
+
+		-webkit-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+		box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75)
+	}	
+}
+

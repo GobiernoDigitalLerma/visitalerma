@@ -1,0 +1,34 @@
+.contenedor-galeria{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.galeria__img{
+    width: 100%;
+    margin-bottom: 30px;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+
+.galeria__img:hover{
+    filter: brightness(100%);
+}
+
+@media screen and (max-width:1200px) {
+    .galeria__img {
+      width: 100%;
+      margin: 450px;
+    }
+  }
+
+@media screen and (max-width:700px) {
+    .galeria__img {
+      width: 80%;
+      margin: 350px;
+    }
+  }

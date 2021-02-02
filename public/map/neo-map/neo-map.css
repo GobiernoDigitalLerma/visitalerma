@@ -1,0 +1,54 @@
+    /*
+      @pandoraxdn
+    */
+
+    .header-xdn{
+      text-transform: uppercase; 
+      height: auto; 
+      width: auto;
+      background: linear-gradient(to right,#8c348b,#e4032b); 
+      text-align: center;
+      color: white;
+    }
+
+    .frame-xdn{
+      height: 200px; 
+      width: 100%;
+    }
+
+    .p-xdn{
+      text-align: justify;
+      background: white;
+    }
+
+    .body-xdn{
+      background: white;
+      height: 200px; 
+      overflow: auto;
+    }
+
+    .background-xdn{
+      background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), 
+                  url(https://www.umhs-adolescenthealth.org/wp-content/uploads/2016/12/google-map-background.jpg);
+    }
+
+    .padding-xdn [class*="col-"] {
+      padding: 0;
+    }
+
+    #map {
+        display: block;
+        width: auto;
+        height: 100%;
+    }
+
+    #add-map{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #text-xdn{
+    	background: white;
+    	text-align: justify;
+    }
